@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <RootNamespace>ApiGateway</RootNamespace>
+        <AssemblyName>ApiGateway</AssemblyName>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="App.Metrics" Version="4.3.0" />
+      <PackageReference Include="App.Metrics.AspNetCore" Version="4.3.0" />
+      <PackageReference Include="App.Metrics.Prometheus" Version="4.3.0" />
+      <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="6.0.11" />
+      <PackageReference Include="Ocelot" Version="18.0.0" />
+      <PackageReference Include="System.ServiceModel.Duplex" Version="4.8.*" />
+      <PackageReference Include="System.ServiceModel.Federation" Version="4.8.*" />
+      <PackageReference Include="System.ServiceModel.Http" Version="4.8.*" />
+      <PackageReference Include="System.ServiceModel.NetTcp" Version="4.8.*" />
+      <PackageReference Include="System.ServiceModel.Security" Version="4.8.*" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Update="appsettings.Alpha.json">
+        <DependentUpon>appsettings.json</DependentUpon>
+      </Content>
+      <Content Update="appsettings.Development.json">
+        <DependentUpon>appsettings.json</DependentUpon>
+      </Content>
+      <Content Update="appsettings.Prod.json">
+        <DependentUpon>appsettings.json</DependentUpon>
+      </Content>
+      <Content Update="appsettings.Stage.json">
+        <DependentUpon>appsettings.json</DependentUpon>
+      </Content>
+    </ItemGroup>
+
+</Project>
